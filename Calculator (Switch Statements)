@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author CC2_1E-35
+ */
+public class SwitchStatementCalculator {
+   public static void main(String[] args) {
+       Scanner sc = new Scanner (System.in);
+       
+       int x, y ;
+       
+       System.out.println("Enter first number");
+          x = sc.nextInt ();
+          
+       System.out.println("Enter second number");
+          y = sc.nextInt ();
+       
+       System.out.println("What arithmetic operation will you use? (+, -, *,/, % OR add, subtract, multiply, divide, modulo");
+       String a = sc.next ();
+       
+       switch (a) {
+           case "+":
+           case "add":    
+               System.out.println(x+y);
+           break;
+           case "-":
+           case "subtract":    
+               System.out.println(x-y);
+           break;
+           case "*":
+           case "multiply":    
+               System.out.println(x*y);
+           break;
+           case "/":
+           case "divide":    
+               System.out.println(x/y);
+           break;
+           case "%":
+           case "modulo":    
+               System.out.println(x%y);
+           break;
+           default:
+               System.out.println("Invalid input");
+       }
+   }        
+}

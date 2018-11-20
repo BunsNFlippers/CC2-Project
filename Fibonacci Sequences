@@ -1,0 +1,25 @@
+public class SequencesOnFibonacci {
+    public static void main(String[] args) {
+        int[] n = {3, 5, 7, 13 , 2, 3, 9};
+        display(n);
+    }
+    static void display (int []n){
+        int i;
+        for (i = 0; i < n.length; i++){
+            System.out.print("f(" + n[i] + ")\t");
+            System.out.print(Fib (n[i]));
+            System.out.print("\n");
+        }
+    }
+    static int Fib (int find){
+        if (find == 0) {
+            return 0;
+        }    
+        else if (find == 1) {
+            return 1;
+        }
+        else {
+            return Fib (find-1) + Fib (find-2); 
+        }            
+    }
+}
